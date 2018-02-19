@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ObstacleSlowdown : MonoBehaviour {
 
-	[Range(1,5)]
-	public int SlowDownFactor = 2;
+	[Range(5,10)]
+	public float SlowDownFactor = 5;
 
 	GameObject _player;
-	int _playerOriginalSpeed;
+	float _playerOriginalSpeed;
 
 	void OnTriggerEnter (Collider col) {
 		if (SlowDownFactor == 0)
