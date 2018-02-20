@@ -11,6 +11,24 @@ public class PathEditor : Editor
 	Path path;
 
 
+	public override void OnInspectorGUI ()
+	{
+		base.OnInspectorGUI ();
+
+		if (GUILayout.Button ("Cerrar/No Cerrar")) {
+			path.ToggleClosed ();
+
+			SceneView.RepaintAll ();
+		}
+
+		if (GUILayout.Button ("Reset")) {
+			creator.CreatePath ();
+			path = creator.path;
+			SceneView.RepaintAll ();
+		}
+	}
+
+
 	void OnSceneGUI()
 	{
 		Input ();
