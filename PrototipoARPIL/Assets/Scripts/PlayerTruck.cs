@@ -11,7 +11,7 @@ public class PlayerTruck : MonoBehaviour {
 	Vector3 targetWayPoint;
 
 	void Start() {
-		wayPoints = GameObject.Find ("Road").GetComponent<WaypointGenerator> ().GetPoints ();
+		wayPoints = GameObject.FindGameObjectWithTag ("Road").GetComponent<WaypointGenerator> ().GetPoints ();
 	}
 
 	void Update () {
