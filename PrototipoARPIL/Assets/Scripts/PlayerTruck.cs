@@ -6,16 +6,19 @@ public class PlayerTruck : MonoBehaviour {
 
 	public float MovementSpeed = 3;
 
-	public Transform[] wayPoints;
+	public Vector3[] wayPoints;
 	public int currentWayPoint = 0; 
-	Transform targetWayPoint;
+	Vector3 targetWayPoint;
+
+	void Start() {
+		wayPoints = GameObject.Find ("Road").GetComponent<WaypointGenerator> ().GetPoints ();
+	}
 
 	void Update () {
 		//handleMovementByInput ();
 
 		if (currentWayPoint < this.wayPoints.Length) {
-			if (targetWayPoint == null)
-				targetWayPoint = wayPoints [currentWayPoint];
+			targetWayPoint = wayPoints [currentWayPoint];
 			move ();
 		}
 	}
@@ -32,10 +35,10 @@ public class PlayerTruck : MonoBehaviour {
 	void move(){
 		float fixedSpeed = MovementSpeed * 0.1f;
 
-		transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint.position - transform.position, fixedSpeed, 0);
-		transform.position = Vector3.MoveTowards(transform.position, targetWayPoint.position, fixedSpeed);
+		transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint - transform.position, fixedSpeed, 0);
+		transform.position = Vector3.MoveTowards(transform.position, targetWayPoint, fixedSpeed);
 
-		if(transform.position == targetWayPoint.position) {
+		if(transform.position == targetWayPoint) {
 			currentWayPoint++;
 
 			if (currentWayPoint == this.wayPoints.Length)
