@@ -20,6 +20,11 @@ public class WaypointGenerator : MonoBehaviour {
 			new Vector3 (-12.88f, 0f, 17.21f),
 			new Vector3 (-11.71f, 0f, 17.82f),
 			new Vector3 (-10.6f, 0f, 18.21f)
+
+			//new Vector3 (20, 0, 20),
+			//new Vector3 (20, 0, -20),
+			//new Vector3 (-20, 0, -20),
+			//new Vector3 (-20, 0, 20)
 		};
 	}
 
