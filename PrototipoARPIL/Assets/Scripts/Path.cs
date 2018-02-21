@@ -5,6 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class Path
 {
+    public const int RESOLUTION_PER_SEGMENT = 30;
+
+
 	[SerializeField, HideInInspector]
 	List<Vector2> points;
 
@@ -92,4 +95,41 @@ public class Path
 	{
 		return (i + points.Count) % points.Count;
 	}
+
+
+    public Vector3[] GetRawPoints()
+    {
+        Vector3[] ret = new Vector3[(RESOLUTION_PER_SEGMENT+1) * NumSegments];
+
+        for(int seg=0;seg<NumSegments;seg++) {
+            Vector2[] ps = GetPointsInSegment(seg);
+            for(int i=0;i<=RESOLUTION_PER_SEGMENT;i++) {
+                float t = (float)i/(float)RESOLUTION_PER_SEGMENT;
+                Vector2 pos = CubicCurve(ps[0], ps[1], ps[2], ps[3], t);
+                ret[RESOLUTION_PER_SEGMENT*seg+i] = new Vector3(pos.x, 0, pos.y);
+            }
+        }
+
+        return ret;
+    }
+
+
+    public static Vector2 Lerp(Vector2 a, Vector2 b, float t)
+    {
+        return a + (b-a) * t;
+    }
+
+    public static Vector2 QuadraticCurve(Vector2 a, Vector2 b, Vector2 c, float t)
+    {
+        Vector2 p0 = Lerp(a,b,t);
+        Vector2 p1 = Lerp(b,c,t);
+        return Lerp(p0, p1, t);
+    }
+
+    public static Vector2 CubicCurve(Vector2 a, Vector2 b, Vector2 c, Vector2 d, float t)
+    {
+        Vector2 p0 = QuadraticCurve(a,b,c,t);
+        Vector2 p1 = QuadraticCurve(b,c,d,t);
+        return Lerp(p0, p1, t);
+    }
 }

@@ -26,6 +26,11 @@ public class PathEditor : Editor
 			path = creator.path;
 			SceneView.RepaintAll ();
 		}
+
+        if(GUILayout.Button("Generar Puntos")){
+            Undo.RecordObject (creator, "Generate Raw Points");
+            creator.GenerateTestPoints(path.GetRawPoints());
+        }
 	}
 
 
