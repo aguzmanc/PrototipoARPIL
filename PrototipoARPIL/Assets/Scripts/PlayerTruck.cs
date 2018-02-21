@@ -23,20 +23,15 @@ public class PlayerTruck : MonoBehaviour {
 		}
 	}
 
-	void handleMovementByInput() {
-		float hMovement = Input.GetAxis ("Horizontal");
-		float vMovement = Input.GetAxis ("Vertical");
-
-		float fixedSpeed = MovementSpeed * 0.1f;
-
-		transform.Translate (fixedSpeed * hMovement, 0, fixedSpeed * vMovement);
-	}
-
 	void move(){
 		float fixedSpeed = MovementSpeed * 0.1f;
 
-		transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint - transform.position, fixedSpeed, 0);
 		transform.position = Vector3.MoveTowards(transform.position, targetWayPoint, fixedSpeed);
+
+		//transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint - transform.position, fixedSpeed, 0);
+		Vector3 directionOfMovement = targetWayPoint - transform.position;
+		if (directionOfMovement != Vector3.zero)
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (directionOfMovement), Time.deltaTime * MovementSpeed);
 
 		if(transform.position == targetWayPoint) {
 			currentWayPoint++;
@@ -46,5 +41,14 @@ public class PlayerTruck : MonoBehaviour {
 
 			targetWayPoint = wayPoints[currentWayPoint];
 		}
-	} 
+	}
+
+	void handleMovementByInput() {
+		float hMovement = Input.GetAxis ("Horizontal");
+		float vMovement = Input.GetAxis ("Vertical");
+
+		float fixedSpeed = MovementSpeed * 0.1f;
+
+		transform.Translate (fixedSpeed * hMovement, 0, fixedSpeed * vMovement);
+	}
 }
