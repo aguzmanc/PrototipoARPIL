@@ -97,16 +97,16 @@ public class Path
 	}
 
 
-    public Vector3[] GetRawPoints()
+    public Vector3[] GetRawPoints(int pointsPerSegment = RESOLUTION_PER_SEGMENT)
     {
-        Vector3[] ret = new Vector3[(RESOLUTION_PER_SEGMENT+1) * NumSegments];
+        Vector3[] ret = new Vector3[(pointsPerSegment+1) * NumSegments];
 
         for(int seg=0;seg<NumSegments;seg++) {
             Vector2[] ps = GetPointsInSegment(seg);
-            for(int i=0;i<=RESOLUTION_PER_SEGMENT;i++) {
-                float t = (float)i/(float)RESOLUTION_PER_SEGMENT;
+            for(int i=0;i<=pointsPerSegment;i++) {
+                float t = (float)i/(float)pointsPerSegment;
                 Vector2 pos = CubicCurve(ps[0], ps[1], ps[2], ps[3], t);
-                ret[RESOLUTION_PER_SEGMENT*seg+i] = new Vector3(pos.x, 0, pos.y);
+                ret[pointsPerSegment*seg+i] = new Vector3(pos.x, 0, pos.y);
             }
         }
 

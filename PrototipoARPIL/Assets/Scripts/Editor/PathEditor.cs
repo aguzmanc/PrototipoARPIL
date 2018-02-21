@@ -29,7 +29,7 @@ public class PathEditor : Editor
 
         if(GUILayout.Button("Generar Puntos")){
             Undo.RecordObject (creator, "Generate Raw Points");
-            creator.GenerateTestPoints(path.GetRawPoints());
+            creator.GenerateTestPoints();
         }
 	}
 
@@ -66,8 +66,6 @@ public class PathEditor : Editor
 		Handles.color = Color.red;
 		for (int i = 0; i < path.NumPoints; i++) {
 			Vector3 newPos = Handles.FreeMoveHandle (ToV3 (path [i]), Quaternion.identity, .1f, Vector3.zero, Handles.CylinderHandleCap);
-			//Vector2 newPos = 
-			//	Handles.FreeMoveHandle (path [i], Quaternion.identity, .1f, Vector2.zero, Handles.CylinderHandleCap);
 
 			if (ToV3(path [i]) != newPos) {
 				Undo.RecordObject (creator, "Move point");
