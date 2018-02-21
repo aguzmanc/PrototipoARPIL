@@ -26,7 +26,7 @@ public class PathCreator : MonoBehaviour
 
     public void GenerateTestPoints()
     {
-        Vector3[] points = path.GetRawPoints();
+        Vector3[] points = path.GetRawPoints(PointsPerSegment);
 
         for(int i=0;i<points.Length;i++) {
             GameObject obj = Instantiate<GameObject>(TestPointPrototype, points[i], Quaternion.identity, transform);
