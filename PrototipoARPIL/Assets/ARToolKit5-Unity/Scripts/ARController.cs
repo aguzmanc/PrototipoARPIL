@@ -383,7 +383,7 @@ public class ARController : MonoBehaviour
 	
 	void OnApplicationPause(bool paused)
 	{
-		//Log(LogTag + "ARController.OnApplicationPause(" + paused + ")");
+		//Log(LogTag + "ARController.OnApplicationPause(" + paused.ToString() + ")");
 		if (paused) {
 			if (_running) {
 				StopAR();
