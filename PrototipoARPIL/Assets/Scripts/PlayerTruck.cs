@@ -13,8 +13,8 @@ public class PlayerTruck : MonoBehaviour {
 
 	//Debugging
 	public float _speed = 0;
-	public bool _isInObstacle = false;
-	public bool stop = false;
+	public bool _slowDownFast = false;
+	public bool _slowDown = false;
 
 	Vector3[] _wayPoints;
 	int _targetWayPointIndex = 0; 
@@ -40,21 +40,21 @@ public class PlayerTruck : MonoBehaviour {
 	}
 
 	void SetSpeed() {
-		if (stop) {
-			if (_speed > 0)
-				_speed -= (Deceleration / 5) * Time.deltaTime;
-			else
-				_speed = 0;
-		} else if (!_isInObstacle && !stop) {
-			if (_speed < MaxSpeed)
-				_speed += Acceleration * Time.deltaTime;
-			else
-				_speed = MaxSpeed;
-		} else if (_isInObstacle) {
+		if (_slowDownFast) {
 			if (_speed > MinSpeed)
 				_speed -= Deceleration * Time.deltaTime;
 			else
 				_speed = MinSpeed;
+		} else if (_slowDown) {
+			if (_speed > MinSpeed)
+				_speed -= (Deceleration / 5) * Time.deltaTime;
+			else
+				_speed = MinSpeed;
+		} else {
+			if (_speed < MaxSpeed)
+				_speed += Acceleration * Time.deltaTime;
+			else
+				_speed = MaxSpeed;
 		}
 	}
 
@@ -71,12 +71,12 @@ public class PlayerTruck : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.CompareTag("Obstacle"))
-			_isInObstacle = true;
+			_slowDownFast = true;
 	}
 
 	void OnTriggerExit(Collider col) {
 		if (col.gameObject.CompareTag("Obstacle"))
-			_isInObstacle = false;
+			_slowDownFast = false;
 	}
 
 	void HandleMovementByInput() {

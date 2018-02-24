@@ -18,14 +18,14 @@ public class GasController : MonoBehaviour {
 				_sliderValue = 0;
 			slider.GetComponent<RectTransform> ().SetSizeWithCurrentAnchors (RectTransform.Axis.Horizontal, _sliderValue);
 		} else {
-			GetComponent<PlayerTruck>().stop = true;
+			GetComponent<PlayerTruck>()._slowDown = true;
 		}
 	}
 
 	private void OnTriggerEnter(Collider col) {
 		if (col.gameObject.CompareTag("Gas")) {
 			_gasQuantity = 100;
-			GetComponent<PlayerTruck>().stop = false;
+			GetComponent<PlayerTruck>()._slowDown = false;
 		}
 	}
 }
