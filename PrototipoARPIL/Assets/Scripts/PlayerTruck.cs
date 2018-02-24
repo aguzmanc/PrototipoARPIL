@@ -62,7 +62,16 @@ public class PlayerTruck : MonoBehaviour {
 			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (directionOfMovement), Time.deltaTime * MaxSpeed);
 	}
 
-	void HandleMovementByInput() {
+    void OnTriggerEnter(Collider col) {
+        if (col.gameObject.CompareTag("Obstacle"))
+            isInObstacle = true;
+    }
+
+    void OnTriggerExit(Collider col) {
+        isInObstacle = false;
+    }
+
+    void HandleMovementByInput() {
 		float hMovement = Input.GetAxis ("Horizontal");
 		float vMovement = Input.GetAxis ("Vertical");
 
