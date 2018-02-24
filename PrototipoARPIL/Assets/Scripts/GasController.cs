@@ -5,9 +5,10 @@ using UnityEngine;
 public class GasController : MonoBehaviour {
 
 	[Range(0.1f, 1)]
-	public float emptyingSpeed = 0.5f;
+	public float emptyingSpeed = 0.3f;
 	public RectTransform slider;
-	float _gasQuantity = 0;
+	[Range(0, 100)]
+	public float _gasQuantity = 100;
 
 	void Update () {
 		if (_gasQuantity > 0) {
@@ -16,9 +17,15 @@ public class GasController : MonoBehaviour {
 			if (_sliderValue < 0)
 				_sliderValue = 0;
 			slider.GetComponent<RectTransform> ().SetSizeWithCurrentAnchors (RectTransform.Axis.Horizontal, _sliderValue);
-		} else if (_gasQuantity <= 0) {
-			if (Input.GetKeyUp ("z"))
-				_gasQuantity = 100;
+		} else {
+			GetComponent<PlayerTruck>().stop = true;
+		}
+	}
+
+	private void OnTriggerEnter(Collider col) {
+		if (col.gameObject.CompareTag("Gas")) {
+			_gasQuantity = 100;
+			GetComponent<PlayerTruck>().stop = false;
 		}
 	}
 }

@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaypointGenerator : MonoBehaviour {
+public class DummyWaypointGenerator : MonoBehaviour {
 
-	public PlayerTruck Player;
 	Vector3[] _waypointVector;
 
 	void Awake () {
-		Player = GameObject.Find ("Player").GetComponent<PlayerTruck> ();
 		_waypointVector = new Vector3[] { 
 			new Vector3 (19.4f, 0f, 15f),
 			new Vector3 (12f, 0f, 2.7f),
@@ -26,10 +24,6 @@ public class WaypointGenerator : MonoBehaviour {
 			//new Vector3 (-20, 0, -20),
 			//new Vector3 (-20, 0, 20)
 		};
-	}
-
-	void Start() {
-		Player.WayPoints = _waypointVector;
 	}
 
 	public Vector3[] GetPoints()
