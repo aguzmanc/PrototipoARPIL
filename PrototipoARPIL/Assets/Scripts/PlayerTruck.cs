@@ -10,6 +10,8 @@ public class PlayerTruck : MonoBehaviour {
 	public float MinSpeed = 3;
 	public float Acceleration = 6;
 	public float Deceleration = 30;
+	[Range(1, 3)]
+	public float offset = 1.5f;
 
 	//Debugging
 	public float _speed = 0;
@@ -24,18 +26,32 @@ public class PlayerTruck : MonoBehaviour {
 		//DUMMY wayPoints = GameObject.FindGameObjectWithTag ("Road").GetComponent<WaypointGenerator> ().GetPoints ();
 		_wayPoints = GameObject.FindGameObjectWithTag("Road").GetComponent<PathCreator>().GetRawPoints();
 		_targetWayPoint = _wayPoints[_targetWayPointIndex];
+
+		transform.GetChild(0).transform.localPosition = new Vector3(offset, 0.5f, 0);
+		transform.GetChild(1).transform.localPosition = new Vector3(offset, 0.5f, 0);
+
 	}
 
 	void Update() {
 		//HandleMovementByInput ();
 
+		HandleOffset();
 		if (_targetWayPointIndex < this._wayPoints.Length - 1) {
 			if (transform.position == _targetWayPoint)
 				_targetWayPoint = _wayPoints[_targetWayPointIndex++];
 			SetSpeed();
 			Move ();
 		} else {
-			_targetWayPointIndex = 0;   
+			_targetWayPointIndex = 0;
+		}
+	}
+
+	void HandleOffset() {
+		//Input.touches[0].fingerId == 0 || 
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			offset *= -1;
+			transform.GetChild(0).transform.localPosition = new Vector3(offset, 0.5f, 0);
+			transform.GetChild(1).transform.localPosition = new Vector3(offset, 0.5f, 0);
 		}
 	}
 
@@ -66,15 +82,19 @@ public class PlayerTruck : MonoBehaviour {
 		//transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint - transform.position, fixedSpeed, 0);
 		Vector3 directionOfMovement = _targetWayPoint - transform.position;
 		if (directionOfMovement != Vector3.zero)
-			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (directionOfMovement), Time.deltaTime * MaxSpeed);
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (directionOfMovement), Time.deltaTime * MaxSpeed/2);
 	}
 
-	void OnTriggerEnter(Collider col) {
+	public void OnTriggerEnterChild(Collider col) {
 		if (col.gameObject.CompareTag("Obstacle"))
 			_slowDownFast = true;
+		else if (col.gameObject.CompareTag("Gas")) {
+			GetComponent<GasController>()._gasQuantity = 100;
+			_slowDown = false;
+		}
 	}
 
-	void OnTriggerExit(Collider col) {
+	public void OnTriggerExitChild(Collider col) {
 		if (col.gameObject.CompareTag("Obstacle"))
 			_slowDownFast = false;
 	}

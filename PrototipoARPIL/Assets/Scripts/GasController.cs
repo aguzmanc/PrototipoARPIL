@@ -21,11 +21,4 @@ public class GasController : MonoBehaviour {
 			GetComponent<PlayerTruck>()._slowDown = true;
 		}
 	}
-
-	private void OnTriggerEnter(Collider col) {
-		if (col.gameObject.CompareTag("Gas")) {
-			_gasQuantity = 100;
-			GetComponent<PlayerTruck>()._slowDown = false;
-		}
-	}
 }
