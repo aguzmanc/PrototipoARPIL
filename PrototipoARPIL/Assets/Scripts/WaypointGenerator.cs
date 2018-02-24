@@ -29,7 +29,7 @@ public class WaypointGenerator : MonoBehaviour {
 	}
 
 	void Start() {
-		Player.wayPoints = _waypointVector;
+		Player.WayPoints = _waypointVector;
 	}
 
 	public Vector3[] GetPoints()
