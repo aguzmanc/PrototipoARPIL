@@ -31,6 +31,11 @@ public class PathEditor : Editor
             Undo.RecordObject (creator, "Generate Raw Points");
             creator.GenerateTestPoints();
         }
+
+
+        if(GUILayout.Button("Generar MESH")) {
+            creator.GenerateMesh();
+        }
 	}
 
 
