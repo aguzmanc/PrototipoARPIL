@@ -106,6 +106,7 @@ public class Path
             for(int i=0;i<=pointsPerSegment;i++) {
                 float t = (float)i/(float)pointsPerSegment;
                 Vector2 pos = CubicCurve(ps[0], ps[1], ps[2], ps[3], t);
+                Debug.Log(pos);
                 ret[pointsPerSegment*seg+i] = new Vector3(pos.x, 0, pos.y);
             }
         }
