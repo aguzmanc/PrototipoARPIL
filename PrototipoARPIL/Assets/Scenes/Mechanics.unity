@@ -234,6 +234,10 @@ Prefab:
       propertyPath: m_Color.a
       value: 0.397
       objectReference: {fileID: 0}
+    - target: {fileID: 1212281893108510, guid: ece5abbcb0f6fb040a59eab2d11ac4cf, type: 2}
+      propertyPath: m_Name
+      value: CooldownGasBkgr
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ece5abbcb0f6fb040a59eab2d11ac4cf, type: 2}
   m_IsPrefabParent: 0
@@ -608,13 +612,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c34ed4e3e0d454aafee300524122bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 10
+  MaxSpeed: 6
   MinSpeed: 3
   Acceleration: 6
   Deceleration: 30
   offset: 1
+  baseTurnAngle: 20
   _speed: 0
-  _slowDownFast: 0
   _slowDown: 0
 --- !u!114 &996527087
 MonoBehaviour:
@@ -629,8 +633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emptyingSpeed: 0.2
   fillingSpeed: 1.8
-  slider: {fileID: 1058700773}
-  _gasQuantity: 100
+  CooldownGas: {fileID: 1058700773}
   Refilling: 0
 --- !u!224 &1058700773 stripped
 RectTransform:
