@@ -89,7 +89,7 @@ public class PlayerTruck : MonoBehaviour {
 		if (col.gameObject.CompareTag("Obstacle"))
 			_slowDownFast = true;
 		else if (col.gameObject.CompareTag("Gas")) {
-			GetComponent<GasController>()._gasQuantity = 100;
+			GetComponent<GasController>().Refilling = true;
 			_slowDown = false;
 		}
 	}
