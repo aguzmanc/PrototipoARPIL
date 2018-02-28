@@ -11,11 +11,18 @@ public class PlayerTruck : MonoBehaviour {
 	public float Acceleration = 6;
 	public float Deceleration = 30;
 	[Range(1, 3)]
-	public float offset = 1.5f;
+	public float offset = 1;
+	public int baseTurnAngle = 20;
+
+	//Debugging
+	float _smallOffset;
+	float _currentOffset;
+	bool _canChange;
 
 	//Debugging
 	public float _speed = 0;
-	public bool _slowDownFast = false;
+	bool _slowDownFast = false;
+	[HideInInspector]
 	public bool _slowDown = false;
 
 	Vector3[] _wayPoints;
@@ -29,7 +36,7 @@ public class PlayerTruck : MonoBehaviour {
 
 		transform.GetChild(0).transform.localPosition = new Vector3(offset, 0.5f, 0);
 		transform.GetChild(1).transform.localPosition = new Vector3(offset, 0.5f, 0);
-
+		_smallOffset = offset / 10;
 	}
 
 	void Update() {
@@ -48,10 +55,29 @@ public class PlayerTruck : MonoBehaviour {
 
 	void HandleOffset() {
 		//Input.touches[0].fingerId == 0 || 
-		if (Input.GetKeyDown(KeyCode.Space)) {
+		if (_canChange && Input.GetKeyDown(KeyCode.Space)) {
+			_canChange = false;
 			offset *= -1;
-			transform.GetChild(0).transform.localPosition = new Vector3(offset, 0.5f, 0);
-			transform.GetChild(1).transform.localPosition = new Vector3(offset, 0.5f, 0);
+		} else {
+			if (offset > 0 && _currentOffset <= offset) { //Player is turning to right lane
+				_currentOffset += _smallOffset;
+				transform.GetChild(0).transform.localEulerAngles = new Vector3(0, baseTurnAngle - _speed * 1.25f, 0);
+				transform.GetChild(1).transform.localEulerAngles = new Vector3(0, baseTurnAngle - _speed * 1.25f, 0);
+			}
+			else if (offset < 0 && _currentOffset >= offset) { //Player is turning to left lane
+				_currentOffset -= _smallOffset;
+				transform.GetChild(0).transform.localEulerAngles = new Vector3(0, -baseTurnAngle + _speed * 1.25f, 0);
+				transform.GetChild(1).transform.localEulerAngles = new Vector3(0, -baseTurnAngle + _speed * 1.25f, 0);
+			}
+
+			transform.GetChild(0).transform.localPosition = new Vector3(_currentOffset, 0.5f, 0);
+			transform.GetChild(1).transform.localPosition = new Vector3(_currentOffset, 0.5f, 0);
+
+			if ((offset > 0 && _currentOffset >= offset) || (offset < 0 && _currentOffset <= offset)) {
+				_canChange = true;
+				transform.GetChild(0).transform.localEulerAngles = new Vector3(0, 0, 0);
+				transform.GetChild(1).transform.localEulerAngles = new Vector3(0, 0, 0);
+			}
 		}
 	}
 
@@ -89,7 +115,7 @@ public class PlayerTruck : MonoBehaviour {
 		if (col.gameObject.CompareTag("Obstacle"))
 			_slowDownFast = true;
 		else if (col.gameObject.CompareTag("Gas")) {
-			GetComponent<GasController>()._gasQuantity = 100;
+			GetComponent<GasController>().Refilling = true;
 			_slowDown = false;
 		}
 	}
