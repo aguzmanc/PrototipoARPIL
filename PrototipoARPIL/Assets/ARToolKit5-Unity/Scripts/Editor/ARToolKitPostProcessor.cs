@@ -53,7 +53,7 @@ public class ARToolKitPostProcessor {
 		Debug.Log(string.Format(FILE_NAME_STATUS, fileName));
 		fileName = fileName.Trim(EXE.ToCharArray());
 		
-		string fromPath = Path.Combine(pathDirectory, string.Format(RELATIVE_PATH, fileName));
+		string fromPath = System.IO.Path.Combine(pathDirectory, string.Format(RELATIVE_PATH, fileName));
 		if (Directory.Exists(string.Format(RELATIVE_PATH, fileName))) {
 			Debug.LogError("ARTOOLKIT BUILD ERROR: Couldn't data directory!");
 			Debug.LogError("Please move DLLs from [appname]_data/Plugins to the same directory as the exe!");
@@ -66,7 +66,7 @@ public class ARToolKitPostProcessor {
 		}
 
 		foreach (string redistFile in REDIST_FILES) {
-			File.Move(Path.Combine(fromPath, redistFile), Path.Combine(pathDirectory, redistFile));
+			File.Move(System.IO.Path.Combine(fromPath, redistFile), System.IO.Path.Combine(pathDirectory, redistFile));
 		}
 	}
 #elif UNITY_IPHONE

@@ -55,7 +55,7 @@ public class PlayerTruck : MonoBehaviour {
 
 	void HandleOffset() {
 		//Input.touches[0].fingerId == 0 || 
-		if (_canChange && Input.GetKeyDown(KeyCode.Space)) {
+		if (_canChange && (Input.GetKeyDown(KeyCode.Space) || DetectTouch())) {
 			_canChange = false;
 			offset *= -1;
 		} else {
@@ -132,5 +132,9 @@ public class PlayerTruck : MonoBehaviour {
 		float fixedSpeed = MaxSpeed * 0.1f;
 
 		transform.Translate (fixedSpeed * hMovement, 0, fixedSpeed * vMovement);
+	}
+
+	bool DetectTouch() {
+		return Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Began;
 	}
 }
