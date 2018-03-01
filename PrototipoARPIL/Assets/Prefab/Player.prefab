@@ -775,7 +775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emptyingSpeed: 0.2
   fillingSpeed: 1.8
-  CooldownGas: {fileID: 0}
+  CooldownGas: {fileID: 224914464860387860, guid: 5af7378130d36f44eab5da7f31eb70e9,
+    type: 2}
   Refilling: 0
 --- !u!114 &114709708674077888
 MonoBehaviour:
