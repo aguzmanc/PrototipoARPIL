@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour 
 {
+    const string LEVEL = "LevelDesign";
+    const string AR = "AR";
+
 	void Start () 
     {
-		
 	}
 	
 	void Update () 
     {
-		
 	}
+
+
 }
