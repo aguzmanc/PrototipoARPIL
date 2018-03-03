@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerTruck : MonoBehaviour {
 
-	[Range(4,10)]
-	public float MaxSpeed = 6;
-	[Range(1, 3)]
-	public float MinSpeed = 3;
-	public float Acceleration = 6;
+	[Range(2.1f,6)]
+	public float MaxSpeed = 3;
+	[Range(0.2f, 2)]
+	public float MinSpeed = 1;
+	public float Acceleration = 3;
 	public float Deceleration = 30;
-	[Range(1, 3)]
+	[Range(0.5f, 2)]
 	public float offset = 1;
 	public int baseTurnAngle = 20;
 

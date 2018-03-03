@@ -260,15 +260,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491246476011034}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.53, y: 0, z: -0.59}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 6.43, y: 0, z: -15.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4801533794509044}
   - {fileID: 4827315229882160}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!4 &4089683414856024
 Transform:
   m_ObjectHideFlags: 1
@@ -328,7 +328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536273295093366}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 3.04945, y: 0, z: 6.14573}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4611908337288858}
@@ -801,9 +801,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c34ed4e3e0d454aafee300524122bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 6
-  MinSpeed: 3
-  Acceleration: 6
+  MaxSpeed: 3
+  MinSpeed: 1
+  Acceleration: 3
   Deceleration: 30
   offset: 1
   baseTurnAngle: 20
@@ -820,8 +820,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97affb0941b7407428bb55000f8a970d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyingSpeed: 0.2
-  fillingSpeed: 1.8
+  emptyingSpeed: 0.1
+  fillingSpeed: 1.3
   CooldownGas: {fileID: 0}
   Refilling: 0
 --- !u!114 &114709708674077888
