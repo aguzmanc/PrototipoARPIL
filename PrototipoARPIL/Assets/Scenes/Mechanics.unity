@@ -163,12 +163,12 @@ Prefab:
     - target: {fileID: 224247571166378852, guid: 5af7378130d36f44eab5da7f31eb70e9,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 15
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 224247571166378852, guid: 5af7378130d36f44eab5da7f31eb70e9,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 15
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224247571166378852, guid: 5af7378130d36f44eab5da7f31eb70e9,
         type: 2}
@@ -183,36 +183,32 @@ Prefab:
     - target: {fileID: 224247571166378852, guid: 5af7378130d36f44eab5da7f31eb70e9,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224247571166378852, guid: 5af7378130d36f44eab5da7f31eb70e9,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224247571166378852, guid: 5af7378130d36f44eab5da7f31eb70e9,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224247571166378852, guid: 5af7378130d36f44eab5da7f31eb70e9,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224247571166378852, guid: 5af7378130d36f44eab5da7f31eb70e9,
         type: 2}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 224247571166378852, guid: 5af7378130d36f44eab5da7f31eb70e9,
         type: 2}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482592584043624, guid: 5af7378130d36f44eab5da7f31eb70e9, type: 2}
-      propertyPath: m_Name
-      value: SliderGas
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5af7378130d36f44eab5da7f31eb70e9, type: 2}
@@ -623,7 +619,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9fea9c23bd66d2b4685be243d3f16661, type: 2}
+  - {fileID: 2100000, guid: f0468c0cfeec8487aaea41574f7d0198, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
