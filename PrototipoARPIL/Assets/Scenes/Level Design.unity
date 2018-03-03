@@ -77,18 +77,15 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
-    m_PVRFilterTypeAO: 0
+    m_PVRFiltering: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-    m_PVRFilteringAtrousPositionSigmaIndirect: 2
-    m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -110,8 +107,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    debug:
-      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &41983522
 Prefab:
@@ -172,6 +167,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 56.925003
       objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
   m_IsPrefabParent: 0
@@ -188,7 +195,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 60259485}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,6 +274,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.36659566
       objectReference: {fileID: 0}
+    - target: {fileID: 1438426151348428, guid: 0e758a6c434b44aab9cd02567be6f0c9, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613650402824518, guid: 0e758a6c434b44aab9cd02567be6f0c9, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e758a6c434b44aab9cd02567be6f0c9, type: 2}
   m_IsPrefabParent: 0
@@ -317,6 +332,14 @@ Prefab:
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
       value: Mancha de aceite (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
@@ -372,6 +395,38 @@ Prefab:
     - target: {fileID: 4979777144672044, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 184
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593862882658980, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378807612902800, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585827238520814, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045380641439790, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106563981200604, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770890462625872, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758884584304552, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661735427036404, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
@@ -436,6 +491,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -121.856
       objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
   m_IsPrefabParent: 0
@@ -455,7 +522,7 @@ GameObject:
   - component: {fileID: 172013994}
   - component: {fileID: 172013993}
   - component: {fileID: 172013992}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +551,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -500,7 +566,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -568,6 +633,38 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1045380641439790, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106563981200604, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585827238520814, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593862882658980, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770890462625872, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661735427036404, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378807612902800, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758884584304552, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
   m_IsPrefabParent: 0
@@ -614,6 +711,14 @@ Prefab:
     - target: {fileID: 4730762771064580, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
@@ -686,6 +791,30 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1016110013325572, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504928323693700, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297255720550220, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163014296290596, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397325146635004, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206710096143908, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
   m_IsPrefabParent: 0
@@ -741,6 +870,38 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 184
       objectReference: {fileID: 0}
+    - target: {fileID: 1661735427036404, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770890462625872, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758884584304552, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585827238520814, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045380641439790, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106563981200604, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378807612902800, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593862882658980, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
   m_IsPrefabParent: 0
@@ -760,7 +921,7 @@ GameObject:
   - component: {fileID: 352125544}
   - component: {fileID: 352125543}
   - component: {fileID: 352125542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,7 +950,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -805,7 +965,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -845,7 +1004,7 @@ GameObject:
   - component: {fileID: 392794452}
   - component: {fileID: 392794451}
   - component: {fileID: 392794450}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +1033,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -890,7 +1048,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -930,7 +1087,7 @@ GameObject:
   - component: {fileID: 427436233}
   - component: {fileID: 427436232}
   - component: {fileID: 427436231}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -959,7 +1116,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -975,7 +1131,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1063,6 +1218,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 52.339
       objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
   m_IsPrefabParent: 0
@@ -1126,6 +1293,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.55
       objectReference: {fileID: 0}
+    - target: {fileID: 1438426151348428, guid: 0e758a6c434b44aab9cd02567be6f0c9, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1613650402824518, guid: 0e758a6c434b44aab9cd02567be6f0c9, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e758a6c434b44aab9cd02567be6f0c9, type: 2}
   m_IsPrefabParent: 0
@@ -1176,6 +1351,14 @@ Prefab:
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
       value: Mancha de aceite (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
@@ -1244,6 +1427,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -29.359001
       objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
   m_IsPrefabParent: 0
@@ -1263,7 +1458,7 @@ GameObject:
   - component: {fileID: 707005586}
   - component: {fileID: 707005585}
   - component: {fileID: 707005584}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,7 +1487,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1308,7 +1502,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1380,6 +1573,14 @@ Prefab:
       propertyPath: m_Name
       value: Mancha de aceite (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
   m_IsPrefabParent: 0
@@ -1396,7 +1597,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 791440083}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Person
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1481,6 +1682,30 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.3734316
       objectReference: {fileID: 0}
+    - target: {fileID: 1504928323693700, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397325146635004, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206710096143908, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163014296290596, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016110013325572, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297255720550220, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
   m_IsPrefabParent: 0
@@ -1544,6 +1769,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.32506213
       objectReference: {fileID: 0}
+    - target: {fileID: 1613650402824518, guid: 0e758a6c434b44aab9cd02567be6f0c9, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438426151348428, guid: 0e758a6c434b44aab9cd02567be6f0c9, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e758a6c434b44aab9cd02567be6f0c9, type: 2}
   m_IsPrefabParent: 0
@@ -1560,7 +1793,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 920503200}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Person (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1594,7 +1827,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 953298410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1628,7 +1861,7 @@ GameObject:
   - component: {fileID: 958737946}
   - component: {fileID: 958737945}
   - component: {fileID: 958737944}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1657,7 +1890,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1673,7 +1905,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1710,7 +1941,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 989597045}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gasolineras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1744,7 +1975,7 @@ GameObject:
   - component: {fileID: 999231267}
   - component: {fileID: 999231266}
   - component: {fileID: 999231265}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1773,7 +2004,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1789,7 +2019,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1873,6 +2102,30 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.3734316
       objectReference: {fileID: 0}
+    - target: {fileID: 1297255720550220, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397325146635004, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016110013325572, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504928323693700, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206710096143908, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163014296290596, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
   m_IsPrefabParent: 0
@@ -1892,7 +2145,7 @@ GameObject:
   - component: {fileID: 1006628975}
   - component: {fileID: 1006628974}
   - component: {fileID: 1006628973}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1921,7 +2174,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1937,7 +2189,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1974,7 +2225,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1026699552}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Persons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2053,6 +2304,18 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.2292949
       objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
   m_IsPrefabParent: 0
@@ -2069,7 +2332,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1046682045}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Person (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2106,7 +2369,7 @@ GameObject:
   - component: {fileID: 1072856243}
   - component: {fileID: 1072856242}
   - component: {fileID: 1072856241}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2135,7 +2398,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2151,7 +2413,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2239,6 +2500,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 20.506
       objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
   m_IsPrefabParent: 0
@@ -2306,6 +2579,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 123.270004
       objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
   m_IsPrefabParent: 0
@@ -2325,7 +2610,7 @@ GameObject:
   - component: {fileID: 1123144250}
   - component: {fileID: 1123144249}
   - component: {fileID: 1123144248}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2354,7 +2639,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2370,7 +2654,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2410,7 +2693,7 @@ GameObject:
   - component: {fileID: 1155637740}
   - component: {fileID: 1155637739}
   - component: {fileID: 1155637738}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2439,7 +2722,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2455,7 +2737,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2495,7 +2776,7 @@ GameObject:
   - component: {fileID: 1198790350}
   - component: {fileID: 1198790349}
   - component: {fileID: 1198790348}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2524,7 +2805,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2540,7 +2820,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2624,6 +2903,38 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1770890462625872, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585827238520814, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1661735427036404, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045380641439790, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378807612902800, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758884584304552, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1106563981200604, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593862882658980, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a87f49074c354a8d9e12fbe4e434f13, type: 2}
   m_IsPrefabParent: 0
@@ -2643,7 +2954,7 @@ GameObject:
   - component: {fileID: 1311463233}
   - component: {fileID: 1311463232}
   - component: {fileID: 1311463231}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2672,7 +2983,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2688,7 +2998,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2776,6 +3085,18 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 20.506
       objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
   m_IsPrefabParent: 0
@@ -2842,6 +3163,18 @@ Prefab:
     - target: {fileID: 4603938356993788, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 76.831
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
@@ -2925,6 +3258,22 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9fea9c23bd66d2b4685be243d3f16661, type: 2}
+    - target: {fileID: 1799216737257420, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993430050426532, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506054062215846, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894970029286412, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
   m_IsPrefabParent: 0
@@ -2987,6 +3336,18 @@ Prefab:
     - target: {fileID: 4603938356993788, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.32122976
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
@@ -3055,6 +3416,18 @@ Prefab:
       propertyPath: m_Name
       value: Tree (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
   m_IsPrefabParent: 0
@@ -3106,6 +3479,14 @@ Prefab:
       propertyPath: m_Name
       value: Mancha de aceite (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
   m_IsPrefabParent: 0
@@ -3156,6 +3537,14 @@ Prefab:
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
       value: Mancha de aceite (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
@@ -3216,6 +3605,34 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1396923920453448, guid: 38d13dcacee1b426d97402bceb872329, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555191808346778, guid: 38d13dcacee1b426d97402bceb872329, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1107335826544144, guid: 38d13dcacee1b426d97402bceb872329, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422981503143930, guid: 38d13dcacee1b426d97402bceb872329, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979651557350474, guid: 38d13dcacee1b426d97402bceb872329, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046957319514434, guid: 38d13dcacee1b426d97402bceb872329, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827251364990260, guid: 38d13dcacee1b426d97402bceb872329, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38d13dcacee1b426d97402bceb872329, type: 2}
   m_IsPrefabParent: 0
@@ -3235,7 +3652,7 @@ GameObject:
   - component: {fileID: 1639760794}
   - component: {fileID: 1639760793}
   - component: {fileID: 1639760792}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3264,7 +3681,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3280,7 +3696,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3317,9 +3732,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1691466068}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Root
-  m_TagString: Untagged
+  m_TagString: ARTrack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3356,7 +3771,7 @@ GameObject:
   - component: {fileID: 1742228208}
   - component: {fileID: 1742228207}
   - component: {fileID: 1742228206}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3385,7 +3800,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3401,7 +3815,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3440,7 +3853,7 @@ GameObject:
   - component: {fileID: 1771045208}
   - component: {fileID: 1771045207}
   - component: {fileID: 1771045206}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3469,7 +3882,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3485,7 +3897,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3522,7 +3933,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1808541845}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Manchas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3593,6 +4004,14 @@ Prefab:
       propertyPath: m_Name
       value: Mancha de aceite (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
   m_IsPrefabParent: 0
@@ -3612,7 +4031,7 @@ GameObject:
   - component: {fileID: 1843739750}
   - component: {fileID: 1843739749}
   - component: {fileID: 1843739748}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3641,7 +4060,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3657,7 +4075,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3693,7 +4110,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1849155448}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Person (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3730,7 +4147,7 @@ GameObject:
   - component: {fileID: 1927610763}
   - component: {fileID: 1927610762}
   - component: {fileID: 1927610761}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3759,7 +4176,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3775,7 +4191,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3815,7 +4230,7 @@ GameObject:
   - component: {fileID: 1935571209}
   - component: {fileID: 1935571208}
   - component: {fileID: 1935571207}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3844,7 +4259,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3860,7 +4274,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3932,6 +4345,14 @@ Prefab:
       propertyPath: m_Name
       value: Mancha de aceite (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
   m_IsPrefabParent: 0
@@ -3951,7 +4372,7 @@ GameObject:
   - component: {fileID: 2009339985}
   - component: {fileID: 2009339984}
   - component: {fileID: 2009339983}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3980,7 +4401,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3996,7 +4416,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4035,7 +4454,7 @@ GameObject:
   - component: {fileID: 2064204006}
   - component: {fileID: 2064204005}
   - component: {fileID: 2064204004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4064,7 +4483,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4080,7 +4498,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4120,7 +4537,7 @@ GameObject:
   - component: {fileID: 2103909368}
   - component: {fileID: 2103909367}
   - component: {fileID: 2103909366}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4149,7 +4566,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4165,7 +4581,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4205,7 +4620,7 @@ GameObject:
   - component: {fileID: 2106469138}
   - component: {fileID: 2106469137}
   - component: {fileID: 2106469136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4234,7 +4649,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4250,7 +4664,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4287,7 +4700,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2108598407}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4330,7 +4743,7 @@ GameObject:
   - component: {fileID: 2129791781}
   - component: {fileID: 2129791780}
   - component: {fileID: 2129791779}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4359,7 +4772,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4375,7 +4787,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4461,6 +4872,18 @@ Prefab:
     - target: {fileID: 4603938356993788, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 124.84401
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179315590677312, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673304021204290, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1418591927244830, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7019d6b0345f940b3ab92b7557fa2b9d, type: 2}
