@@ -18,6 +18,11 @@ public class PlayerTruck : MonoBehaviour {
 	public GameObject SoundEffectPrototype;
 	public AudioClip OilAudio;
 	public AudioClip GasAudio;
+	public AudioClip MotorAudio;
+	public AudioClip MotorNoGasAudio;
+
+	AudioSource _audioSource;
+	bool _hasGas = true;
 
 	//Debugging
 	float _smallOffset;
@@ -42,6 +47,10 @@ public class PlayerTruck : MonoBehaviour {
 		transform.GetChild(0).transform.localPosition = new Vector3(offset, 0.5f, 0);
 		transform.GetChild(1).transform.localPosition = new Vector3(offset, 0.5f, 0);
 		_smallOffset = offset / 10;
+
+		_audioSource = GetComponent<AudioSource> ();
+		_audioSource.clip = MotorAudio;
+		_audioSource.Play ();
 	}
 
 	void Update() {
@@ -102,6 +111,20 @@ public class PlayerTruck : MonoBehaviour {
 				_speed += Acceleration * Time.deltaTime;
 			else
 				_speed = MaxSpeed;
+		}
+
+		if (_speed > MinSpeed) {
+			if (!_hasGas) {
+				_audioSource.clip = MotorAudio;
+				_audioSource.Play ();
+			}
+			_hasGas = true;
+		} else {
+			if (_hasGas) {
+				_audioSource.clip = MotorNoGasAudio;
+				_audioSource.Play ();
+			}
+			_hasGas = false;
 		}
 	}
 
