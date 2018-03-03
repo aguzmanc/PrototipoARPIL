@@ -30,7 +30,7 @@ public class PathCreator : MonoBehaviour
     {
     }
 
-    public void GenerateMesh()
+    public void _GenerateMesh()
     {
         Vector3[] points = path.GetRawPoints(PointsPerSegment);
 
@@ -88,5 +88,78 @@ public class PathCreator : MonoBehaviour
 
         mesh.vertices = vs;
         mesh.triangles = ts;
+    }
+
+
+    public Vector3[] ALLPOINTS;
+
+    public void GenerateMesh()
+    {
+        MeshFilter meshFilter = GetComponentInChildren<MeshFilter>();
+
+        Vector3[] points = path.GetRawPoints(PointsPerSegment);
+        Debug.Log(points.Length);
+        ALLPOINTS = points;
+
+        Vector3 up = Vector3.up * Height;
+        List<Vector3> vs = new List<Vector3>();
+
+        Vector3 a=Vector3.zero, b=Vector3.zero, forward=Vector3.zero, right=Vector3.zero;
+
+        // generate vertices
+        for(int i=0;i<points.Length;i++) {
+            if(i<points.Length-2) { // for all the points
+                a = points[i];
+                b = points[i+1];
+
+                forward = b-a;
+                right = (Quaternion.AngleAxis(90, Vector3.up) * forward).normalized * Width;
+
+                vs.Add(a+right);
+                vs.Add(a+right+up);
+                vs.Add(a-right+up);
+                vs.Add(a-right);
+            } else { // for the last point
+                a = points[i-1];
+                b = points[i];
+
+                forward = b-a;
+                right = (Quaternion.AngleAxis(90, Vector3.up) * forward).normalized * Width;
+
+                vs.Add(b+right);
+                vs.Add(b+right+up);
+                vs.Add(b-right+up);
+                vs.Add(b-right);
+            }
+        }
+
+        List<int> faces = new List<int>();
+
+        for(int i=0;i<points.Length-1;i++) {
+            a = points[i];
+            b = points[i+1];
+
+            forward = b-a;
+            right = (Quaternion.AngleAxis(90, Vector3.up) * forward).normalized * Width;
+
+            int[] tmp = new int[] {
+                0,1,4,
+                1,5,4,
+                1,2,5,
+                2,6,5,
+                3,7,6,
+                3,6,2
+            };
+
+            for(int k=0;k<tmp.Length;k++) 
+                faces.Add(i*4 + tmp[k]);
+        }
+
+        Mesh mesh = new Mesh();
+        meshFilter.mesh = mesh;
+        mesh.Clear();
+
+        mesh.vertices = vs.ToArray();
+        mesh.triangles = faces.ToArray();
     }
 }
