@@ -110,13 +110,18 @@ public class Path
             }
         }
 
-        // BUG FIX : REMOVING last element (is only a 0,0.0 vector :S )
-        List<Vector3> tmp = new List<Vector3>(ret);
-        tmp.RemoveAt(tmp.Count-1);
-        if(isClosed)
-            tmp.RemoveAt(tmp.Count-1);
 
-        Debug.Log(tmp.Count);
+
+        // BUG FIX : REMOVING last element (is only a 0,0.0 vector :S )
+        List<Vector3> tmp = new List<Vector3>();
+        for(int i=0;i<ret.Length;i++)
+            if(ret[i] != Vector3.zero)
+                tmp.Add(ret[i]);
+        //tmp.RemoveAt(tmp.Count-1);
+//        if(isClosed)
+//            tmp.RemoveAt(tmp.Count-1);
+//
+//        Debug.Log(tmp.Count);
         return tmp.ToArray();
     }
 
