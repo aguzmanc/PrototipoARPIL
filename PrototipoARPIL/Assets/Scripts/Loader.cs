@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour 
 {
+    static Loader _instance;
+    public static Loader Instance{get{_instance;}}
+
+
     const string PATH       = "Path";
     const string LEVEL      = "LevelDesign";
     const string AR         = "AR";
@@ -16,6 +20,13 @@ public class Loader : MonoBehaviour
     public bool Ar = true;
     public bool Mechanics = true;
     public bool Sounds = true;
+
+    public System.EventHandler OnAllScenesLoaded;
+
+    void Awake()
+    {
+        _instance = this;
+    }
 
 
 	void Start () 
@@ -46,6 +57,22 @@ public class Loader : MonoBehaviour
             Debug.Log("Sounds Scene Loaded!");
         }
 
+        if(OnAllScenesLoaded!=null)
+            OnAllScenesLoaded(this, System.EventArgs.Empty);
+
         Destroy(gameObject,1f);
 	}
+
+
+    /*
+     * MODO DE USO: 
+    void Start()
+    {
+        Loader.Instance.OnAllScenesLoaded += CuandoSeCargaronTodasLasEscenas;
+    }
+
+    void CuandoSeCargaronTodasLasEscenas(object source, System.EventArgs args) {
+        // poner codigo aqui
+    }
+    */
 }
