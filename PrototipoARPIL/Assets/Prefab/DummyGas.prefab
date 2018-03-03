@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23922973649050622}
   - component: {fileID: 54855105124392194}
   m_Layer: 0
-  m_Name: Gas
+  m_Name: DummyGas
   m_TagString: Gas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
