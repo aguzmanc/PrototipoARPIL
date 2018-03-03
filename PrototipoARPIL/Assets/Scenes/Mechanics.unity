@@ -210,6 +210,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114366119984989694, guid: 5af7378130d36f44eab5da7f31eb70e9,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166085989538288, guid: 5af7378130d36f44eab5da7f31eb70e9,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5af7378130d36f44eab5da7f31eb70e9, type: 2}
   m_IsPrefabParent: 0
@@ -285,6 +295,11 @@ Prefab:
     - target: {fileID: 4073202641446100, guid: 4954fb91f0d6e3d43b662ec4e682b2ca, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146788575850272, guid: 4954fb91f0d6e3d43b662ec4e682b2ca,
+        type: 2}
+      propertyPath: MaxSpeed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4954fb91f0d6e3d43b662ec4e682b2ca, type: 2}
