@@ -11,24 +11,24 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ARTest.unity
     guid: e8dadde47f5c2490eb8228baa934e15b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARTest2.unity
     guid: dfcc650d8786b41aab1fe00b7b7eafb9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 55a8ce0becb582a42a25c4c3ca018481
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Path.unity
     guid: 6b10681bbd68b4696b874a9618dd2477
-  - enabled: 0
-    path: Assets/Scenes/Level Design.unity
+  - enabled: 1
+    path: Assets/Scenes/LevelDesign.unity
     guid: 063aa16856dd6419ebab09c245a9355a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/AR.unity
     guid: 39954b2b2f7ae4be0b1ff9e0a8ae82e4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mechanics.unity
     guid: d5cb02bdfa8846a4999ee148e2fc4a19
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Sounds.unity
     guid: 9c1534cce6c3a44cb99db0a00fdc345c
