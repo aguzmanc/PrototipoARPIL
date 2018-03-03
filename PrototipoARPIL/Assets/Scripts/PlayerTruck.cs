@@ -14,6 +14,16 @@ public class PlayerTruck : MonoBehaviour {
 	public float offset = 1;
 	public int baseTurnAngle = 20;
 
+	// Audios
+	public GameObject SoundEffectPrototype;
+	public AudioClip OilAudio;
+	public AudioClip GasAudio;
+	public AudioClip MotorAudio;
+	public AudioClip MotorNoGasAudio;
+
+	AudioSource _audioSource;
+	bool _hasGas = true;
+
 	//Debugging
 	float _smallOffset;
 	float _currentOffset;
@@ -37,6 +47,10 @@ public class PlayerTruck : MonoBehaviour {
 		transform.GetChild(0).transform.localPosition = new Vector3(offset, 0.5f, 0);
 		transform.GetChild(1).transform.localPosition = new Vector3(offset, 0.5f, 0);
 		_smallOffset = offset / 10;
+
+		_audioSource = GetComponent<AudioSource> ();
+		_audioSource.clip = MotorAudio;
+		_audioSource.Play ();
 	}
 
 	void Update() {
@@ -98,6 +112,20 @@ public class PlayerTruck : MonoBehaviour {
 			else
 				_speed = MaxSpeed;
 		}
+
+		if (_speed > MinSpeed) {
+			if (!_hasGas) {
+				_audioSource.clip = MotorAudio;
+				_audioSource.Play ();
+			}
+			_hasGas = true;
+		} else {
+			if (_hasGas) {
+				_audioSource.clip = MotorNoGasAudio;
+				_audioSource.Play ();
+			}
+			_hasGas = false;
+		}
 	}
 
 	void Move() {
@@ -112,9 +140,12 @@ public class PlayerTruck : MonoBehaviour {
 	}
 
 	public void OnTriggerEnterChild(Collider col) {
-		if (col.gameObject.CompareTag("Obstacle"))
+		if (col.gameObject.CompareTag ("Obstacle")) {
+			Instantiate (SoundEffectPrototype).GetComponent<SoundEffectController> ().Play (OilAudio);
 			_slowDownFast = true;
+		}
 		else if (col.gameObject.CompareTag("Gas")) {
+			Instantiate (SoundEffectPrototype).GetComponent<SoundEffectController> ().Play (GasAudio);
 			GetComponent<GasController>().Refilling = true;
 			_slowDown = false;
 		}

@@ -33,3 +33,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.blend1
+
+# Mac
+*.DS_STORE
