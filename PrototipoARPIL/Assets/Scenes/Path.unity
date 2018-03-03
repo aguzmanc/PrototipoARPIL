@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 15741046}
   - component: {fileID: 15741048}
   - component: {fileID: 15741047}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mesh
-  m_TagString: Untagged
+  m_TagString: ARTrack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 401873304}
   - component: {fileID: 401873305}
   m_Layer: 10
-  m_Name: GameObject
+  m_Name: Root All
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 401873303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd4f1d83c05c4ce39fb324293f1f21d, type: 3}
+  m_Script: {fileID: 11500000, guid: 54572a39454ac43129df20fa3b65d9bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TagsToImport:
@@ -533,7 +533,7 @@ MonoBehaviour:
     240 240 240 240 240 240\n  77 118 240 217  50 180 240 240 240 240 240 240 240
     240 240 240\n 175 153 163 186  53 226 240 240 240 240 240 240 240 240 240 240\n
     209 155  72  85 216 240 240 240 240 240 240 240 240 240 239 233\n\n"
-  PatternWidth: 0.08
+  PatternWidth: 13
   BarcodeID: 0
   MultiConfigFile: 
   NFTDataName: 
