@@ -84,8 +84,8 @@ public class PlayerTruck : MonoBehaviour {
 				transform.GetChild(1).transform.localEulerAngles = new Vector3(0, -baseTurnAngle + _speed * 1.25f, 0);
 			}
 
-			transform.GetChild(0).transform.localPosition = new Vector3(_currentOffset, 0.5f, 0);
-			transform.GetChild(1).transform.localPosition = new Vector3(_currentOffset, 0.5f, 0);
+			transform.GetChild(0).transform.localPosition = new Vector3(_currentOffset, 0.1f, 0);
+			transform.GetChild(1).transform.localPosition = new Vector3(_currentOffset, 0.1f, 0);
 
 			if ((offset > 0 && _currentOffset >= offset) || (offset < 0 && _currentOffset <= offset)) {
 				_canChange = true;
