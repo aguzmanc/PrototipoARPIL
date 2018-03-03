@@ -8,7 +8,6 @@ public class Loader : MonoBehaviour
     static Loader _instance;
     public static Loader Instance{get{return _instance;}}
 
-
     const string PATH       = "Path";
     const string LEVEL      = "LevelDesign";
     const string AR         = "AR";
@@ -62,17 +61,4 @@ public class Loader : MonoBehaviour
 
         Destroy(gameObject,1f);
 	}
-
-
-    /*
-     * MODO DE USO: 
-    void Start()
-    {
-        Loader.Instance.OnAllScenesLoaded += CuandoSeCargaronTodasLasEscenas;
-    }
-
-    void CuandoSeCargaronTodasLasEscenas(object source, System.EventArgs args) {
-        // poner codigo aqui
-    }
-    */
 }

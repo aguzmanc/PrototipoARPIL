@@ -106,12 +106,18 @@ public class Path
             for(int i=0;i<=pointsPerSegment;i++) {
                 float t = (float)i/(float)pointsPerSegment;
                 Vector2 pos = CubicCurve(ps[0], ps[1], ps[2], ps[3], t);
-                Debug.Log(pos);
                 ret[pointsPerSegment*seg+i] = new Vector3(pos.x, 0, pos.y);
             }
         }
 
-        return ret;
+        // BUG FIX : REMOVING last element (is only a 0,0.0 vector :S )
+        List<Vector3> tmp = new List<Vector3>(ret);
+        tmp.RemoveAt(tmp.Count-1);
+        if(isClosed)
+            tmp.RemoveAt(tmp.Count-1);
+
+        Debug.Log(tmp.Count);
+        return tmp.ToArray();
     }
 
 
