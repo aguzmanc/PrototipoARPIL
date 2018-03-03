@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerTruck : MonoBehaviour {
 
-	[Range(2.1f,6)]
-	public float MaxSpeed = 3;
-	[Range(0.2f, 2)]
-	public float MinSpeed = 1;
+	[Range(3.1f, 6)]
+	public float MaxSpeed = 5;
+	[Range(0.2f, 3)]
+	public float MinSpeed = 2;
 	public float Acceleration = 3;
 	public float Deceleration = 30;
 	[Range(0.5f, 2)]
@@ -43,7 +43,7 @@ public class PlayerTruck : MonoBehaviour {
 		//HandleMovementByInput ();
 
 		HandleOffset();
-		if (_targetWayPointIndex < this._wayPoints.Length - 1) {
+		if (_targetWayPointIndex < this._wayPoints.Length - 2) {
 			if (transform.position == _targetWayPoint)
 				_targetWayPoint = _wayPoints[_targetWayPointIndex++];
 			SetSpeed();
