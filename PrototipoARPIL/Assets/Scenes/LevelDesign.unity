@@ -77,15 +77,18 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -107,6 +110,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &41983522
 Prefab:
@@ -331,7 +336,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
-      value: Mancha de aceite (6)
+      value: Oil stain (6)
       objectReference: {fileID: 0}
     - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Layer
@@ -551,6 +556,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -566,6 +572,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -737,7 +744,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 26.55
+      value: 25.629
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalPosition.y
@@ -745,7 +752,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.76
+      value: 1.681
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalRotation.x
@@ -950,6 +957,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -965,6 +973,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1033,6 +1042,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1048,6 +1058,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1116,6 +1127,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1131,6 +1143,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1350,7 +1363,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
-      value: Mancha de aceite (4)
+      value: Oil stain (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Layer
@@ -1487,6 +1500,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1502,6 +1516,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -1571,7 +1586,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
-      value: Mancha de aceite (2)
+      value: Oil stain (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Layer
@@ -1632,7 +1647,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.29
+      value: -10.287
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1640,23 +1655,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -20.77
+      value: -20.794
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.053730294
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9985555
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_RootOrder
@@ -1664,11 +1679,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -6.16
       objectReference: {fileID: 0}
     - target: {fileID: 1297255720550220, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_Name
-      value: Gasolinera (2)
+      value: Fuel station (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalScale.x
@@ -1890,6 +1905,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1905,6 +1921,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2004,6 +2021,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2019,6 +2037,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2056,7 +2075,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.985
+      value: -2.291
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2064,7 +2083,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -10.245
+      value: -9.939
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2088,7 +2107,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1297255720550220, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_Name
-      value: Gasolinera (1)
+      value: Fuel station (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4758689877945056, guid: f77c6fa4523fd410588b4a9278101ade, type: 2}
       propertyPath: m_LocalScale.x
@@ -2174,6 +2193,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2189,6 +2209,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2398,6 +2419,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2413,6 +2435,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2639,6 +2662,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2654,6 +2678,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2722,6 +2747,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2737,6 +2763,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2805,6 +2832,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2820,6 +2848,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -2983,6 +3012,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2998,6 +3028,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3197,7 +3228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4187677121634934, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.16
+      value: 3.84
       objectReference: {fileID: 0}
     - target: {fileID: 4187677121634934, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3222,57 +3253,6 @@ Prefab:
     - target: {fileID: 4187677121634934, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187677121634934, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187677121634934, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 6.423263
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187677121634934, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.08552898
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187677121634934, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.61998445
-      objectReference: {fileID: 0}
-    - target: {fileID: 4203156056914296, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.6125002
-      objectReference: {fileID: 0}
-    - target: {fileID: 23858890886974178, guid: 32530d8716dff4d5e88c376f07c71ae3,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ff462207e4af843408a818d157e901f2, type: 2}
-    - target: {fileID: 23006143161075554, guid: 32530d8716dff4d5e88c376f07c71ae3,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ff462207e4af843408a818d157e901f2, type: 2}
-    - target: {fileID: 23247704748013942, guid: 32530d8716dff4d5e88c376f07c71ae3,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9fea9c23bd66d2b4685be243d3f16661, type: 2}
-    - target: {fileID: 1799216737257420, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1993430050426532, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1506054062215846, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1894970029286412, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
@@ -3477,7 +3457,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
-      value: Mancha de aceite (5)
+      value: Oil stain (5)
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Layer
@@ -3536,7 +3516,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
-      value: Mancha de aceite (1)
+      value: Oil stain (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1286764113286708, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Layer
@@ -3681,6 +3661,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3696,6 +3677,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3800,6 +3782,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3815,6 +3798,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -3882,6 +3866,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -3897,6 +3882,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4002,7 +3988,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
-      value: Mancha de aceite (7)
+      value: Oil stain (7)
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Layer
@@ -4060,6 +4046,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4075,6 +4062,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4176,6 +4164,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4191,6 +4180,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4259,6 +4249,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4274,6 +4265,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4343,7 +4335,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Name
-      value: Mancha de aceite (3)
+      value: Oil stain (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1033287989890046, guid: 5f0d9337c46044144a002a68c083e7c1, type: 2}
       propertyPath: m_Layer
@@ -4401,6 +4393,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4416,6 +4409,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4483,6 +4477,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4498,6 +4493,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4566,6 +4562,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4581,6 +4578,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4649,6 +4647,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4664,6 +4663,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -4772,6 +4772,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -4787,6 +4788,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

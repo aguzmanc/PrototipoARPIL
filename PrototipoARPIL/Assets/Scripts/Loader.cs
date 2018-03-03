@@ -61,17 +61,4 @@ public class Loader : MonoBehaviour
 
         Destroy(gameObject,1f);
 	}
-
-
-    /*
-     * MODO DE USO: 
-    void Start()
-    {
-        Loader.Instance.OnAllScenesLoaded += CuandoSeCargaronTodasLasEscenas;
-    }
-
-    void CuandoSeCargaronTodasLasEscenas(object source, System.EventArgs args) {
-        // poner codigo aqui
-    }
-    */
 }
