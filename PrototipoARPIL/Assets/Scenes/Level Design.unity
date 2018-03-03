@@ -2906,6 +2906,25 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.61998445
       objectReference: {fileID: 0}
+    - target: {fileID: 4203156056914296, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.6125002
+      objectReference: {fileID: 0}
+    - target: {fileID: 23858890886974178, guid: 32530d8716dff4d5e88c376f07c71ae3,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ff462207e4af843408a818d157e901f2, type: 2}
+    - target: {fileID: 23006143161075554, guid: 32530d8716dff4d5e88c376f07c71ae3,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ff462207e4af843408a818d157e901f2, type: 2}
+    - target: {fileID: 23247704748013942, guid: 32530d8716dff4d5e88c376f07c71ae3,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9fea9c23bd66d2b4685be243d3f16661, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32530d8716dff4d5e88c376f07c71ae3, type: 2}
   m_IsPrefabParent: 0
