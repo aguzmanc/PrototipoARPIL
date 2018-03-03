@@ -8,7 +8,7 @@ public class Loader : MonoBehaviour
     static Loader _instance;
     public static Loader Instance{get{return _instance;}}
 
-    const string PATH       = "Path";
+    const string PATH       = "Path2";
     const string LEVEL      = "LevelDesign";
     const string AR         = "AR";
     const string MECHANICS  = "Mechanics"; 
