@@ -43,7 +43,7 @@ public class PlayerTruck : MonoBehaviour {
 		//HandleMovementByInput ();
 
 		HandleOffset();
-		if (_targetWayPointIndex < this._wayPoints.Length - 2) {
+		if (_targetWayPointIndex < this._wayPoints.Length - 1) {
 			if (transform.position == _targetWayPoint)
 				_targetWayPoint = _wayPoints[_targetWayPointIndex++];
 			SetSpeed();
