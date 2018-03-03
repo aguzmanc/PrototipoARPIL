@@ -14,6 +14,11 @@ public class PlayerTruck : MonoBehaviour {
 	public float offset = 1;
 	public int baseTurnAngle = 20;
 
+	// Audios
+	public GameObject SoundEffectPrototype;
+	public AudioClip OilAudio;
+	public AudioClip GasAudio;
+
 	//Debugging
 	float _smallOffset;
 	float _currentOffset;
@@ -112,9 +117,12 @@ public class PlayerTruck : MonoBehaviour {
 	}
 
 	public void OnTriggerEnterChild(Collider col) {
-		if (col.gameObject.CompareTag("Obstacle"))
+		if (col.gameObject.CompareTag ("Obstacle")) {
+			Instantiate (SoundEffectPrototype).GetComponent<SoundEffectController> ().Play (OilAudio);
 			_slowDownFast = true;
+		}
 		else if (col.gameObject.CompareTag("Gas")) {
+			Instantiate (SoundEffectPrototype).GetComponent<SoundEffectController> ().Play (GasAudio);
 			GetComponent<GasController>().Refilling = true;
 			_slowDown = false;
 		}
