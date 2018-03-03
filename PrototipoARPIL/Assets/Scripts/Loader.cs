@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Loader : MonoBehaviour 
 {
     static Loader _instance;
-    public static Loader Instance{get{_instance;}}
+    public static Loader Instance{get{return _instance;}}
 
 
     const string PATH       = "Path";
