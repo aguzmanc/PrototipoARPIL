@@ -12,6 +12,8 @@ public class PlayerTruck : MonoBehaviour {
 	public float Deceleration = 30;
 	[Range(0.5f, 2)]
 	public float offset = 1;
+	[Range(10, 25)]
+	public float laneChangingSpeed = 15;
 	public int baseTurnAngle = 20;
 
 	bool _hasGas = true;
@@ -41,7 +43,7 @@ public class PlayerTruck : MonoBehaviour {
 
 		transform.GetChild(0).transform.localPosition = new Vector3(offset, 0.5f, 0);
 		transform.GetChild(1).transform.localPosition = new Vector3(offset, 0.5f, 0);
-		_smallOffset = offset / 10;
+		_smallOffset = offset / laneChangingSpeed;
 	}
 
 	void Update() {
