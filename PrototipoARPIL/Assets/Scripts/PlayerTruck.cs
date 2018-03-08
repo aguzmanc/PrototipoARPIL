@@ -119,11 +119,13 @@ public class PlayerTruck : MonoBehaviour {
 
 	public void OnTriggerEnterChild(Collider col) {
 		if (col.gameObject.CompareTag ("Obstacle")) {
-			OnOilSlide(this, System.EventArgs.Empty);
+			if (OnOilSlide != null)
+				OnOilSlide(this, System.EventArgs.Empty);
 			_slowDownFast = true;
 		}
 		else if (col.gameObject.CompareTag("Gas")) {
-			OnGasRefill(this, System.EventArgs.Empty);
+			if (OnGasRefill != null)
+				OnGasRefill(this, System.EventArgs.Empty);
 			GetComponent<GasController>().Refilling = true;
 			_slowDown = false;
 		}

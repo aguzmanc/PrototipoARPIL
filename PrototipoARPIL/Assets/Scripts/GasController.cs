@@ -24,7 +24,8 @@ public class GasController : MonoBehaviour {
 		if (_gasQuantity > 0 && !Refilling) {
 			_gasQuantity -= emptyingSpeed;
 			if (_gasQuantity < 0) {
-				OnNoGas(this, System.EventArgs.Empty);
+				if (OnNoGas != null)
+					OnNoGas(this, System.EventArgs.Empty);
 				_gasQuantity = 0;
 			}
 			float _sliderValue = _gasQuantity * _cooldownGasFactor;
