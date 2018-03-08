@@ -127,6 +127,7 @@ public class PlayerTruck : MonoBehaviour {
 			if (OnGasRefill != null)
 				OnGasRefill(this, System.EventArgs.Empty);
 			GetComponent<GasController>().Refilling = true;
+			col.gameObject.GetComponentInChildren<ParticleSystem>().Play();
 			_slowDown = false;
 		}
 	}
