@@ -14,6 +14,8 @@ public class GasController : MonoBehaviour {
 	public bool Refilling = false;
 	float _gasQuantity = 100;
 
+	public System.EventHandler OnNoGas;
+
 	void Start() {
 		_cooldownGasFactor = CooldownGas.GetComponent<RectTransform>().rect.width / 100;
 	}
@@ -21,8 +23,10 @@ public class GasController : MonoBehaviour {
 	void Update () {
 		if (_gasQuantity > 0 && !Refilling) {
 			_gasQuantity -= emptyingSpeed;
-			if (_gasQuantity < 0)
+			if (_gasQuantity < 0) {
+				OnNoGas(this, System.EventArgs.Empty);
 				_gasQuantity = 0;
+			}
 			float _sliderValue = _gasQuantity * _cooldownGasFactor;
 			CooldownGas.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, _sliderValue);
 		} else if (Refilling) {
