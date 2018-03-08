@@ -13,8 +13,7 @@ public class PlayerTruck : MonoBehaviour {
 	[Range(0.5f, 2)]
 	public float offset = 1;
 	[Range(10, 25)]
-	public float laneChangingSpeed = 15;
-	public int baseTurnAngle = 20;
+	public float laneChangingSpeed = 20;
 
 	bool _hasGas = true;
 
@@ -24,7 +23,7 @@ public class PlayerTruck : MonoBehaviour {
 	bool _canChange;
 
 	//Debugging
-	public float _speed = 0;
+	float _speed = 0;
 	bool _slowDownFast = false;
 	[HideInInspector]
 	public bool _slowDown = false;
@@ -68,13 +67,13 @@ public class PlayerTruck : MonoBehaviour {
 		} else {
 			if (offset > 0 && _currentOffset <= offset) { //Player is turning to right lane
 				_currentOffset += _smallOffset;
-				transform.GetChild(0).transform.localEulerAngles = new Vector3(0, baseTurnAngle - _speed * 1.25f, 0);
-				transform.GetChild(1).transform.localEulerAngles = new Vector3(0, baseTurnAngle - _speed * 1.25f, 0);
+				transform.GetChild(0).transform.localEulerAngles = new Vector3(0, laneChangingSpeed - _speed * 1.25f, 0);
+				transform.GetChild(1).transform.localEulerAngles = new Vector3(0, laneChangingSpeed - _speed * 1.25f, 0);
 			}
 			else if (offset < 0 && _currentOffset >= offset) { //Player is turning to left lane
 				_currentOffset -= _smallOffset;
-				transform.GetChild(0).transform.localEulerAngles = new Vector3(0, -baseTurnAngle + _speed * 1.25f, 0);
-				transform.GetChild(1).transform.localEulerAngles = new Vector3(0, -baseTurnAngle + _speed * 1.25f, 0);
+				transform.GetChild(0).transform.localEulerAngles = new Vector3(0, -laneChangingSpeed + _speed * 1.25f, 0);
+				transform.GetChild(1).transform.localEulerAngles = new Vector3(0, -laneChangingSpeed + _speed * 1.25f, 0);
 			}
 
 			transform.GetChild(0).transform.localPosition = new Vector3(_currentOffset, 0.1f, 0);

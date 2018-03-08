@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4470890097598912}
   - component: {fileID: 33276040176678788}
   - component: {fileID: 23117712125849218}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RuedaDelanteraIzquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4739494023664802}
   - component: {fileID: 33803263466648142}
   - component: {fileID: 23561446559078310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RuedaDelanteraDerecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4611908337288858}
   - component: {fileID: 33382221998022756}
   - component: {fileID: 23090581809770628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cabina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4039362767329268}
   - component: {fileID: 33708413243567886}
   - component: {fileID: 23812708507579260}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RuedaTraseraDerecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4801533794509044}
   - component: {fileID: 65283534043400672}
   - component: {fileID: 114709708674077888}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4089683414856024}
   - component: {fileID: 33080362768671758}
   - component: {fileID: 23303685783044220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RuedaTraseraIzquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4073202641446100}
   - component: {fileID: 114146788575850272}
   - component: {fileID: 114652412541640080}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -138,7 +138,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4554155130161692}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4303451690497678}
   - component: {fileID: 33032163617198932}
   - component: {fileID: 23889730467423358}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Carga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 4227104206991036}
   - component: {fileID: 33231101192696504}
   - component: {fileID: 23052663162535554}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RuedaCentraIzquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 4752006400465448}
   - component: {fileID: 33833002150842398}
   - component: {fileID: 23691609338308006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RuedaCentralDerecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4827315229882160}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AxisFix
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 4013184147555106}
   - component: {fileID: 33614071183786294}
   - component: {fileID: 23811263545594346}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ChasisTrasero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1491246476011034}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 6.43, y: 0, z: -15.38}
+  m_LocalPosition: {x: 0.7, y: 0, z: -21.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4801533794509044}
@@ -389,7 +389,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1279976652534194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4073202641446100}
@@ -402,7 +402,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886955138054754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4554155130161692}
@@ -788,8 +788,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1.58}
-  m_Center: {x: 0, y: 0.5, z: 0.28}
+  m_Size: {x: 1.1707628, y: 1, z: 3.2586565}
+  m_Center: {x: 0.0030635623, y: 0.5, z: 0.067827225}
 --- !u!114 &114146788575850272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -806,8 +806,7 @@ MonoBehaviour:
   Acceleration: 3
   Deceleration: 30
   offset: 1
-  baseTurnAngle: 13
-  _speed: 0
+  laneChangingSpeed: 20
   _slowDown: 0
 --- !u!114 &114652412541640080
 MonoBehaviour:
@@ -822,8 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emptyingSpeed: 0.1
   fillingSpeed: 1.3
-  CooldownGas: {fileID: 224914464860387860, guid: 5af7378130d36f44eab5da7f31eb70e9,
-    type: 2}
+  CooldownGas: {fileID: 0}
   Refilling: 0
 --- !u!114 &114709708674077888
 MonoBehaviour:
