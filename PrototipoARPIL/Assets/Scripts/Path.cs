@@ -7,13 +7,11 @@ public class Path
 {
     public const int RESOLUTION_PER_SEGMENT = 30;
 
-
 	[SerializeField, HideInInspector]
 	List<Vector2> points;
 
 	[SerializeField]
-	bool isClosed;
-
+	public bool isClosed;
 
 	public Path(Vector2 centre)
 	{
