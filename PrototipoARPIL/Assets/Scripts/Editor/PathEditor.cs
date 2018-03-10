@@ -10,7 +10,6 @@ public class PathEditor : Editor
 	PathCreator creator;
 	Path path;
 
-
 	public override void OnInspectorGUI ()
 	{
 		base.OnInspectorGUI ();
@@ -30,11 +29,6 @@ public class PathEditor : Editor
         if(GUILayout.Button("Generar Puntos")){
             Undo.RecordObject (creator, "Generate Raw Points");
             creator.GenerateTestPoints();
-        }
-
-
-        if(GUILayout.Button("Generar MESH")) {
-            creator.GenerateMesh();
         }
 	}
 
@@ -77,6 +71,15 @@ public class PathEditor : Editor
 				path.MovePoint (i, ToV2(newPos));
 			}
 		}
+
+		if (creator.ShowDebugLines) {
+			Vector3[] allPoints = path.GetRawPoints (creator.PointsPerSegment);
+			for (int i = 0; i < allPoints.Length; i++) {
+				Debug.DrawRay (allPoints [i], Vector3.up * creator.DebugLinesWidth, Color.blue);
+			}
+		}
+
+		creator.GenerateMesh ();
 	}
 
 
