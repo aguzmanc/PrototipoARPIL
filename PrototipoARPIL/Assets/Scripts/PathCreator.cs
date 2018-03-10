@@ -8,7 +8,6 @@ public class PathCreator : MonoBehaviour
 	public Path path;
 
 	[Header("Required")]
-    [Range(2, 100)]
     public GameObject TestPointPrototype;
 
 	[Header("Road Configuration")]
@@ -21,11 +20,20 @@ public class PathCreator : MonoBehaviour
 	[Range(0, 50)]
 	public int PercentajeLane = 10;
 
-
-	[Header("Debug")]
-	public bool ShowDebugLines = false;
+	[Header("Raw Positions")]
+	public bool ShowRawPositions = false;
 	[Range(0, 1f)]
 	public float DebugLinesWidth = 0.2f;
+
+	[Header("Mark Lines")]
+	public bool ShowMarkLines = false;
+	[Range(0.1f, 5f)]
+	public float MarkLinesDistance = 2f;
+	[Range(0.01f, 1f)]
+	public float MarkWidth = 0.1f;
+	[Range(0.01f, 1f)]
+	public float MarkHeight = 0.1f;
+
 
 
 	public void CreatePath()
@@ -40,16 +48,11 @@ public class PathCreator : MonoBehaviour
     }
 
 
-    public void GenerateTestPoints()
-    {
-		
-    }
-
-
 	public void GenerateMesh()
 	{
 		GenerateRoadMesh (transform.Find ("RoadMesh").gameObject);
 		GenerateLaneMesh (transform.Find ("LaneMesh").gameObject);
+		GenerateMarkingsMesh (transform.Find ("MarkingsMesh").gameObject);
 	}
  
 
@@ -153,8 +156,6 @@ public class PathCreator : MonoBehaviour
     }
 
 
-
-
 	public void GenerateLaneMesh(GameObject child) 
 	{
 		MeshFilter meshFilter = child.GetComponent<MeshFilter>();
@@ -232,5 +233,95 @@ public class PathCreator : MonoBehaviour
 
 		mesh.vertices = vs.ToArray();
 		mesh.triangles = tris.ToArray();
+	}
+
+
+	public void GenerateMarkingsMesh(GameObject child)
+	{
+		MeshFilter meshFilter = child.GetComponent<MeshFilter>();
+		Vector3[] points = GetEquidistantPoints (MarkLinesDistance);
+
+		List<Vector3> vs = new List<Vector3>();
+		List<int> tris = new List<int> ();
+
+		Vector3 up = Vector3.up * (Height + 0.001f); // a litle bit up
+		Vector3 a=Vector3.zero, b=Vector3.zero, forward=Vector3.zero, right=Vector3.zero, innerRight=Vector3.zero;
+
+		for (int i = 0; i < points.Length; i++) {
+			if(i<points.Length-2) { // for all the points
+				a = points[i];
+				b = points[i+1];
+			} else { // for the last point
+				a = points[i-1];
+				b = path.isClosed ? points [0] : points [i];
+			}
+
+			forward = (b-a).normalized * MarkHeight;
+			right = (Quaternion.AngleAxis (90, Vector3.up) * forward).normalized * MarkWidth;
+			Vector3 p = points [i];
+
+			Vector3 
+				A = p + right + up,
+				B = p - right + up,
+				C = p - right + forward + up,
+				D = p + right + forward + up;
+
+			vs.Add (A);vs.Add (B);vs.Add (C);vs.Add (D);
+
+			int[] tmp = new int[] {
+				0,1,2,
+				0,2,3
+			};
+
+			Vector3[] face = new Vector3[3];
+
+			for(int k=0;k<tmp.Length;k++){
+				int vertexNumber = i*4 + tmp[k];
+				tris.Add(vertexNumber);
+			}
+		}
+
+		Mesh mesh = new Mesh();
+		meshFilter.mesh = mesh;
+		mesh.Clear();
+
+		mesh.vertices = vs.ToArray();
+		mesh.triangles = tris.ToArray();
+	}
+
+
+
+
+
+	public Vector3[] GetEquidistantPoints(float equalDistance)
+	{
+		List<Vector3> MarkPoints = new List<Vector3> ();
+		Vector3[] points = path.GetRawPoints(PointsPerSegment);
+
+		Vector3 current = points [0];
+		MarkPoints.Add (current); // just the initial point
+		int idx = 1;
+		Vector3 next = points [idx];
+		float distanceLeft = equalDistance;
+
+		while (true) {
+			float dist = (next - current).magnitude;
+
+			if (distanceLeft < dist) {
+				Vector3 newPoint = current + (next - current).normalized * distanceLeft;
+				MarkPoints.Add (newPoint);
+				distanceLeft = equalDistance;
+				current = newPoint;
+			} else {
+				distanceLeft -= dist;
+				current = next;
+				if (idx + 1 < points.Length)
+					next = points [++idx];
+				else
+					break;
+			}
+		}
+
+		return MarkPoints.ToArray();
 	}
 }

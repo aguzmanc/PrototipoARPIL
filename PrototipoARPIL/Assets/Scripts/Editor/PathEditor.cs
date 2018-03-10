@@ -25,11 +25,6 @@ public class PathEditor : Editor
 			path = creator.path;
 			SceneView.RepaintAll ();
 		}
-
-        if(GUILayout.Button("Generar Puntos")){
-            Undo.RecordObject (creator, "Generate Raw Points");
-            creator.GenerateTestPoints();
-        }
 	}
 
 
@@ -72,10 +67,18 @@ public class PathEditor : Editor
 			}
 		}
 
-		if (creator.ShowDebugLines) {
+		if (creator.ShowRawPositions) {
 			Vector3[] allPoints = path.GetRawPoints (creator.PointsPerSegment);
 			for (int i = 0; i < allPoints.Length; i++) {
-				Debug.DrawRay (allPoints [i], Vector3.up * creator.DebugLinesWidth, Color.blue);
+				Debug.DrawRay (creator.transform.TransformPoint(allPoints [i]), Vector3.up * creator.DebugLinesWidth, Color.blue);
+			}
+		}
+
+
+		if (creator.ShowMarkLines) {
+			Vector3[] marks = creator.GetEquidistantPoints (creator.MarkLinesDistance);
+			for (int i = 0; i < marks.Length; i++) {
+				Debug.DrawRay (creator.transform.TransformPoint(marks [i]), Vector3.up * creator.DebugLinesWidth, Color.red);
 			}
 		}
 
