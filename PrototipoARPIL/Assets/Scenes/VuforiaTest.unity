@@ -654,6 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImageTargetTemplate: {fileID: 1423713134}
+  Scale: 0.4
 --- !u!114 &887723131
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class UDTEventHandler : MonoBehaviour, IUserDefinedTargetEventHandler
     /// that is instantiated for augmentations of new User-Defined Targets.
     /// </summary>
     public ImageTargetBehaviour ImageTargetTemplate;
+	public float Scale;
 
     public int LastTargetIndex
     {
@@ -167,7 +168,7 @@ public class UDTEventHandler : MonoBehaviour, IUserDefinedTargetEventHandler
             string targetName = string.Format("{0}-{1}", ImageTargetTemplate.TrackableName, m_TargetCounter);
 
             // generate a new target:
-            m_TargetBuildingBehaviour.BuildNewTarget(targetName, ImageTargetTemplate.GetSize().x);
+            m_TargetBuildingBehaviour.BuildNewTarget(targetName, ImageTargetTemplate.GetSize().x / Scale);
         }
         else
         {
