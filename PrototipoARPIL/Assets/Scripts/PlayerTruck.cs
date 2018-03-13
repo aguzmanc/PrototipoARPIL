@@ -45,7 +45,7 @@ public class PlayerTruck : MonoBehaviour {
 		_smallOffset = offset / laneChangingSpeed;
 	}
 
-	void Update() {
+	void FixedUpdate() {
 		//HandleMovementByInput ();
 
 		HandleOffset();
