@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour {
 	public AudioClip[] AmbientalSounds;
 	public int MaximumSourcesAtATime = 3;
 	public float MinSoundInterval = 5f;
 	public float SoundIntervalDifference = 3f;
+	public AudioMixerGroup GrupoAmbiental;
 
 	int _numberOfSoundsPlaying = 0;
 	List<AudioSource> _audioSources = new List<AudioSource> ();
@@ -17,6 +19,7 @@ public class SoundManager : MonoBehaviour {
 			AudioSource newSource = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
 			newSource.playOnAwake = false;
 			_audioSources.Add (newSource);
+			newSource.outputAudioMixerGroup = GrupoAmbiental;
 		}
 	}
 
