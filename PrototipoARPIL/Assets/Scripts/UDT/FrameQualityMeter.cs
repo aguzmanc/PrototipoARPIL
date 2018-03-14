@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class FrameQualityMeter : MonoBehaviour
 {
-    public Image[] LowMedHigh;
+    /*public Image[] LowMedHigh;
 
     void SetMeter(Color low, Color med, Color high)
     {
@@ -41,5 +41,38 @@ public class FrameQualityMeter : MonoBehaviour
                 SetMeter(Color.red, Color.yellow, Color.green);
                 break;
         }
-    }
+    }*/
+
+	public Color EnabledColor;
+	Image _buttonBackground;
+
+	void Start() {
+		_buttonBackground = GetComponent<Image> ();
+	}
+
+	void ChangeDisplay(bool isHighQuality) {
+		if (isHighQuality) {
+			Debug.Log("High quality");
+			EnabledColor.a = 1;
+			_buttonBackground.color = EnabledColor;
+		} else {
+			Color transparent = _buttonBackground.color;
+			transparent.a = 0;
+			_buttonBackground.color = transparent;
+		}
+	}
+
+	public void SetQuality(Vuforia.ImageTargetBuilder.FrameQuality quality)
+	{
+		switch (quality) {
+			case (Vuforia.ImageTargetBuilder.FrameQuality.FRAME_QUALITY_NONE):
+			case (Vuforia.ImageTargetBuilder.FrameQuality.FRAME_QUALITY_LOW):
+			case (Vuforia.ImageTargetBuilder.FrameQuality.FRAME_QUALITY_MEDIUM):
+				ChangeDisplay (false);
+				break;
+			case (Vuforia.ImageTargetBuilder.FrameQuality.FRAME_QUALITY_HIGH):
+				ChangeDisplay (true);
+				break;
+		}
+	}
 }
