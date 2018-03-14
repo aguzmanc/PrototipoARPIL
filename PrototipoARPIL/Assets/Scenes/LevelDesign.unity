@@ -793,6 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gully: {fileID: 400002, guid: 8f5a3d012a01756439910d16a3f40f9e, type: 3}
+  gullSpeed: 0.08
 --- !u!1001 &156172682
 Prefab:
   m_ObjectHideFlags: 0
