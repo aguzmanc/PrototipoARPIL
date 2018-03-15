@@ -34,6 +34,7 @@ public class PlayerTruck : MonoBehaviour {
 
 	public System.EventHandler OnGasRefill;
 	public System.EventHandler OnOilSlide;
+	public System.EventHandler OnGoalReached;
 
 	void Start() {
 		//DUMMY wayPoints = GameObject.FindGameObjectWithTag ("Road").GetComponent<WaypointGenerator> ().GetPoints ();
@@ -119,15 +120,17 @@ public class PlayerTruck : MonoBehaviour {
 	public void OnTriggerEnterChild(Collider col) {
 		if (col.gameObject.CompareTag ("Obstacle")) {
 			if (OnOilSlide != null)
-				OnOilSlide(this, System.EventArgs.Empty);
+				OnOilSlide (this, System.EventArgs.Empty);
 			_slowDownFast = true;
-			col.gameObject.GetComponentInChildren<ParticleSystem>().Play();
-		} else if (col.gameObject.CompareTag("Gas")) {
+			col.gameObject.GetComponentInChildren<ParticleSystem> ().Play ();
+		} else if (col.gameObject.CompareTag ("Gas")) {
 			if (OnGasRefill != null)
-				OnGasRefill(this, System.EventArgs.Empty);
-			GetComponent<GasController>().Refilling = true;
-			col.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+				OnGasRefill (this, System.EventArgs.Empty);
+			GetComponent<GasController> ().Refilling = true;
+			col.gameObject.GetComponentInChildren<ParticleSystem> ().Play ();
 			_slowDown = false;
+		} else if (col.gameObject.CompareTag ("Goal")) {
+			OnGoalReached (this, System.EventArgs.Empty);
 		}
 	}
 

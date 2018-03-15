@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Gas
   - ARTrack
+  - Goal
   layers:
   - Default
   - TransparentFX
