@@ -148,6 +148,7 @@ MonoBehaviour:
   GasAudio: {fileID: 8300000, guid: d06abc000851f8b40a76966ac4d3d093, type: 3}
   MotorAudio: {fileID: 8300000, guid: ee3d88105816e6446a48cc5d825b0f7a, type: 3}
   MotorNoGasAudio: {fileID: 8300000, guid: d3b72f7e1d179244384e09fda237565c, type: 3}
+  GoalAudio: {fileID: 8300000, guid: a2dc86fff58a58d48b86f478764c0155, type: 3}
 --- !u!82 &361247955
 AudioSource:
   m_ObjectHideFlags: 0
