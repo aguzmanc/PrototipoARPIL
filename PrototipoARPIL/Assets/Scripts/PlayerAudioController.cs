@@ -9,6 +9,7 @@ public class PlayerAudioController : MonoBehaviour {
 	public AudioClip GasAudio;
 	public AudioClip MotorAudio;
 	public AudioClip MotorNoGasAudio;
+	public AudioClip GoalAudio;
 
 	AudioSource _audioSource;
 	Transform _player;
@@ -22,10 +23,12 @@ public class PlayerAudioController : MonoBehaviour {
 		GameObject playerObject = GameObject.FindGameObjectWithTag ("Player");
 		_player = playerObject.transform;
 
-		PlayerTruck playerTruck = playerObject.GetComponent<PlayerTruck> ();
+		PlayerTruck playerTruck = GameObject.FindObjectOfType<PlayerTruck> ();
+		Debug.Log (playerTruck);
 		playerTruck.OnGasRefill += PlayGasAudio;
 		playerTruck.OnGasRefill += PlayMotorAudio;
 		playerTruck.OnOilSlide += PlayOilAudio;
+		playerTruck.OnGoalReached += PlayGoalAudio;
 
 		playerObject.GetComponent<GasController> ().OnNoGas += PlayMotorNoGasAudio;
 	}
@@ -49,6 +52,10 @@ public class PlayerAudioController : MonoBehaviour {
 
 	void PlayOilAudio(object source, System.EventArgs args) {
 		InstantiateAudio (OilAudio);
+	}
+
+	void PlayGoalAudio(object source, System.EventArgs args) {
+		InstantiateAudio (GoalAudio);
 	}
 
 	void PlayAudio(AudioClip clip) {
