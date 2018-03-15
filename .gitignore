@@ -36,3 +36,6 @@ sysinfo.txt
 
 # Mac
 *.DS_STORE
+
+# AR
+QCAR/

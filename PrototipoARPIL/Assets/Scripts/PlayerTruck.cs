@@ -108,7 +108,6 @@ public class PlayerTruck : MonoBehaviour {
 
 	void Move() {
 		float fixedSpeed = _speed * 0.02f;
-
 		transform.position = Vector3.MoveTowards(transform.position, _targetWayPoint, fixedSpeed);
 
 		//transform.forward = Vector3.RotateTowards(transform.forward, targetWayPoint - transform.position, fixedSpeed, 0);
@@ -122,8 +121,8 @@ public class PlayerTruck : MonoBehaviour {
 			if (OnOilSlide != null)
 				OnOilSlide(this, System.EventArgs.Empty);
 			_slowDownFast = true;
-		}
-		else if (col.gameObject.CompareTag("Gas")) {
+			col.gameObject.GetComponentInChildren<ParticleSystem>().Play();
+		} else if (col.gameObject.CompareTag("Gas")) {
 			if (OnGasRefill != null)
 				OnGasRefill(this, System.EventArgs.Empty);
 			GetComponent<GasController>().Refilling = true;

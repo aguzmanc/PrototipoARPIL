@@ -5,6 +5,8 @@ using UnityEngine;
 public class GullGenerator : MonoBehaviour {
 
 	public Transform Gully;
+	[Range(0.01f,0.2f)]
+	public float gullSpeed = 0.08f;
 
 	//NW - SE - NE -SW
 	Vector3[] startSpawnPoints = new[] {
@@ -14,7 +16,6 @@ public class GullGenerator : MonoBehaviour {
 		new Vector3(-40, 30, -40)
 	};
 	Vector3 selectedEndSpawnPoint;
-	float gullSpeed = 0.1f;
 	bool gullsGenerated = true;
 
 	void Start() {
@@ -29,13 +30,13 @@ public class GullGenerator : MonoBehaviour {
 
 		var gull1 = Instantiate(Gully, selectedStartSpawnPoint, new Quaternion(0, 0, 0, 0));
 		gull1.transform.parent = gameObject.transform;
-		var gull2 = Instantiate(Gully, selectedStartSpawnPoint + new Vector3(1, -1, 0), new Quaternion(0, 0, 0, 0));
+		var gull2 = Instantiate(Gully, selectedStartSpawnPoint + new Vector3(1, -1, 1), new Quaternion(0, 0, 0, 0));
 		gull2.transform.parent = gameObject.transform;
 		var gull3 = Instantiate(Gully, selectedStartSpawnPoint + new Vector3(-1, -1, 0), new Quaternion(0, 0, 0, 0));
 		gull3.transform.parent = gameObject.transform;
-		var gull4 = Instantiate(Gully, selectedStartSpawnPoint + new Vector3(2, -2, 0), new Quaternion(0, 0, 0, 0));
+		var gull4 = Instantiate(Gully, selectedStartSpawnPoint + new Vector3(2, -2, 0.2f), new Quaternion(0, 0, 0, 0));
 		gull4.transform.parent = gameObject.transform;
-		var gull5 = Instantiate(Gully, selectedStartSpawnPoint + new Vector3(-2, -2, 0), new Quaternion(0, 0, 0, 0));
+		var gull5 = Instantiate(Gully, selectedStartSpawnPoint + new Vector3(-2, -2, 1), new Quaternion(0, 0, 0, 0));
 		gull5.transform.parent = gameObject.transform;
 
 		switch (selectedStartSpawnIndex) {
@@ -63,14 +64,14 @@ public class GullGenerator : MonoBehaviour {
 			gullsGenerated = true;
 			GenerateGulls();
 		} else {
-			if (Mathf.Abs(transform.position.x) > 40) {
+			if (transform.position == selectedEndSpawnPoint) {
 				foreach (Transform child in transform)
 					GameObject.Destroy(child.gameObject);
 				gullsGenerated = false;
 				transform.eulerAngles = Vector3.zero;
 			}
 			
-			transform.position = Vector3.MoveTowards(transform.position, selectedEndSpawnPoint + new Vector3(1,0,1), gullSpeed);
+			transform.position = Vector3.MoveTowards(transform.position, selectedEndSpawnPoint, gullSpeed);
 		}
 	}
 }
